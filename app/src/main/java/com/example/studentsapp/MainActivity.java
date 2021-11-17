@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         listV.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //כאן צריך לפתוח את האקטיביטי של הצגת פרטים לפי המיקום הספציפי
                 Log.d("TAG", "row selscted: " + position);
             }
         });

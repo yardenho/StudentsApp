@@ -7,14 +7,14 @@ public class Model {
     static  final private Model instance = new Model();
     private List<Student> data = new LinkedList<Student>();
 
-//    private Model(){
-////        for(int i=0; i<10;++i){
-////            Student student = new Student();
-////            student.setID("000" + i);
-////            student.setName("Kuku" + i);
-////            data.add(student);
-////        }
-//    }
+    private Model(){
+        for(int i=0; i<10;++i){
+            Student student = new Student();
+            student.setID("000" + i);
+            student.setName("Kuku" + i);
+            data.add(student);
+        }
+    }
 
     public List<Student> getStudentList(){
         return data;

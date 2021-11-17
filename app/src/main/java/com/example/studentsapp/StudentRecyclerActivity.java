@@ -40,24 +40,23 @@ public class StudentRecyclerActivity extends AppCompatActivity {
         MyAdapter adapter = new MyAdapter();
         list.setAdapter(adapter);
 
-        adapter.setOnItemClickListener(new OnItemClickListenre() {
+        adapter.setOnItemClickListener(new OnItemClickListener() {
             @Override
             public void OnItemClick(int position) {
+                //כאן צריך לפתוח את האקטיביטי של הצגת פרטים לפי המיקום הספציפי
                 Log.d("TAG", "row was clicked " + position);
             }
         });
 
     }
 
-
-
     static class MyViewHolder extends RecyclerView.ViewHolder {
-        private final OnItemClickListenre listener;
+        private final OnItemClickListener listener;
         //תפקידו לזכור את הרפרנסים
         TextView name;
         TextView id;
         CheckBox cb;
-        public MyViewHolder(@NonNull View itemView, OnItemClickListenre listener) {
+        public MyViewHolder(@NonNull View itemView, OnItemClickListener listener) {
             super(itemView);
 
             name = itemView.findViewById(R.id.list_row_name_tv);
@@ -90,15 +89,15 @@ public class StudentRecyclerActivity extends AppCompatActivity {
         }
     }
 
-    public interface OnItemClickListenre{
+    public interface OnItemClickListener{
         void OnItemClick(int position);
     }
 
     public class MyAdapter extends RecyclerView.Adapter<MyViewHolder>{
 
-        private OnItemClickListenre listener;
+        private OnItemClickListener listener;
 
-        void setOnItemClickListener(OnItemClickListenre listener){
+        void setOnItemClickListener(OnItemClickListener listener){
             this.listener = listener;
         }
         @NonNull
@@ -117,8 +116,6 @@ public class StudentRecyclerActivity extends AppCompatActivity {
             //תחבר לי את הview עם הdata של אותה שורה
             Student student = data.get(position);
             holder.bind(student);
-
-
         }
 
         @Override
