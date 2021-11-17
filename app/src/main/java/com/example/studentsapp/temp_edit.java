@@ -19,7 +19,7 @@ public class temp_edit extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.temp_edit);
 
-        nameEt = findViewById(R.id);
+        nameEt = findViewById(R.id.main_name_edit_text);
         idEt = findViewById(R.id.main_id_edit_text);
         ageEt = findViewById(R.id.main_age_edit_text2);
         paidEt = findViewById(R.id.main_paid);
@@ -44,5 +44,4 @@ public class temp_edit extends AppCompatActivity {
         Log.d("TAG", "Student:" +name+ " "+age);
 
     }
-}
 }

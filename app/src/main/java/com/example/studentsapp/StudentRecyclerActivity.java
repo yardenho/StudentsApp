@@ -34,7 +34,7 @@ public class StudentRecyclerActivity extends AppCompatActivity {
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         list.setLayoutManager(layoutManager);
 
-        data = Model.instance.getStudentList();
+        data = Model.getInstance().getStudentList();
 
         //נחבר את האקטיביטי עם האדפטר
         MyAdapter adapter = new MyAdapter();
@@ -60,7 +60,6 @@ public class StudentRecyclerActivity extends AppCompatActivity {
         public MyViewHolder(@NonNull View itemView, OnItemClickListenre listener) {
             super(itemView);
 
-
             name = itemView.findViewById(R.id.list_row_name_tv);
             id = itemView.findViewById(R.id.list_row_id_tv);
             cb = itemView.findViewById(R.id.list_rpw_checkBox);
@@ -85,23 +84,22 @@ public class StudentRecyclerActivity extends AppCompatActivity {
         }
 
         public void bind(Student student){
-            name.setText(student.name);
-            id.setText(student.id);
-            cb.setChecked(student.cb);
+            name.setText(student.getName());
+            id.setText(student.getID());
+            cb.setChecked(student.getcb());
         }
     }
 
     public interface OnItemClickListenre{
         void OnItemClick(int position);
-
     }
 
     public class MyAdapter extends RecyclerView.Adapter<MyViewHolder>{
 
         private OnItemClickListenre listener;
 
-        void setOnItemClickListener(OnItemClickListenre listenre){
-            this.listener = listenre;
+        void setOnItemClickListener(OnItemClickListenre listener){
+            this.listener = listener;
         }
         @NonNull
         @Override

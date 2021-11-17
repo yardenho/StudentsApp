@@ -13,6 +13,9 @@
             android:name=".NewStudent"
             android:exported="false" />
         <activity
+            android:name=".Present_student_details"
+            android:exported="false" />
+        <activity
             android:name=".temp_edit"
             android:exported="false" />
         <activity

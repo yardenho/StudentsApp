@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        data = Model.instance.getStudentList();
+        data = Model.getInstance().getStudentList();
         ListView listV = findViewById(R.id.main_list_view);
         MyAdapter adapter = new MyAdapter();
         listV.setAdapter(adapter);
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
                         Log.d("Tag", "cb " + cb.getTag().toString());
                         int pos = Integer.parseInt(cb.getTag().toString());
                         Student student = data.get(pos);
-                        student.cb = cb.isChecked();
+                        student.setCB(cb.isChecked());
                     }
                 });
             }
@@ -82,9 +82,9 @@ public class MainActivity extends AppCompatActivity {
             cb.setTag(position);
 
             Student student = data.get(position);
-            nameTv.setText(student.name);
-            idTv.setText(student.id);
-            cb.setChecked(student.cb);
+            nameTv.setText(student.getName());
+            idTv.setText(student.getID());
+            cb.setChecked(student.getcb());
 
             return convertView;
         }
