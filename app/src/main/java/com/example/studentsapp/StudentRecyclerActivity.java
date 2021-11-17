@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -26,7 +27,11 @@ public class StudentRecyclerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_recycler);
-        //the list
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
         RecyclerView list = findViewById(R.id.student_recycler_rview);
         list.setHasFixedSize(true);
 
@@ -44,6 +49,12 @@ public class StudentRecyclerActivity extends AppCompatActivity {
             @Override
             public void OnItemClick(int position) {
                 //כאן צריך לפתוח את האקטיביטי של הצגת פרטים לפי המיקום הספציפי
+
+                Intent intent = new Intent(StudentRecyclerActivity.this, Present_student_details.class);
+                intent.putExtra("pos", position);
+                startActivity(intent);
+
+
                 Log.d("TAG", "row was clicked " + position);
             }
         });
@@ -76,8 +87,8 @@ public class StudentRecyclerActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     int pos = getAdapterPosition();
+                    //צריך לעדכן את הdata של הסטודנט
                     Log.d("TAG", "checkBox was clicked "+ pos);
-
                 }
             });
         }

@@ -8,7 +8,7 @@
     tools:context=".NewStudent">
 
     <EditText
-        android:id="@+id/editstudent_address_editText2"
+        android:id="@+id/editstudent_address_editText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -122,24 +122,24 @@
         app:layout_constraintTop_toBottomOf="@+id/editStudent_address_text" />
 
     <Button
-        android:id="@+id/newStudent_cancel_btn"
+        android:id="@+id/editStudent_cancel_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#BCB2B2"
         android:text="CANCEL"
-        app:layout_constraintEnd_toStartOf="@+id/newStudent_save_btn"
+        app:layout_constraintEnd_toStartOf="@+id/editStudent_save_btn"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="624dp" />
 
     <Button
-        android:id="@+id/newStudent_save_btn"
+        android:id="@+id/editStudent_save_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#BCB2B2"
         android:text="SAVE"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/newStudent_cancel_btn"
+        app:layout_constraintStart_toEndOf="@+id/editStudent_cancel_btn"
         tools:layout_editor_absoluteY="622dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

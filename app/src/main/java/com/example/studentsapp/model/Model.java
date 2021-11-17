@@ -8,11 +8,15 @@ public class Model {
     private List<Student> data = new LinkedList<Student>();
 
     private Model(){
+
         for(int i=0; i<10;++i){
             Student student = new Student();
             student.setID("000" + i);
             student.setName("Kuku" + i);
+            student.setPhoneNumber("052" + i);
+            student.setAddress("ashdod " + i);
             data.add(student);
+
         }
     }
 
@@ -22,6 +26,9 @@ public class Model {
 
     public void addNewStudent(Student student){
         data.add(student);
+    }
+    public void deleteStudent(int pos){
+        data.remove(pos);
     }
 
     public static Model getInstance(){

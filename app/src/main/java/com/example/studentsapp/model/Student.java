@@ -25,7 +25,7 @@ public class Student {
     public boolean getcb(){
         return cb;
     }
-    public String getPhoneNuber(){
+    public String getPhoneNumber(){
         return phoneNumber;
     }
     public String getAddress(){
