@@ -14,8 +14,9 @@ import android.widget.CheckBox;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.class4demo.model.Model;
-import com.example.class4demo.model.Student;
+
+import com.example.studentsapp.model.Model;
+import com.example.studentsapp.model.Student;
 
 import java.util.LinkedList;
 import java.util.List;
