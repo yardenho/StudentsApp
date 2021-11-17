@@ -116,6 +116,7 @@ public class StudentRecyclerActivity extends AppCompatActivity {
             //תחבר לי את הview עם הdata של אותה שורה
             Student student = data.get(position);
             holder.bind(student);
+
         }
 
         @Override
