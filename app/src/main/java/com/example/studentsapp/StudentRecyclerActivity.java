@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 
@@ -27,6 +28,15 @@ public class StudentRecyclerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_recycler);
+
+        ImageButton addBtn = findViewById(R.id.add_student_btn);
+        addBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(StudentRecyclerActivity.this, NewStudent.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -49,12 +59,9 @@ public class StudentRecyclerActivity extends AppCompatActivity {
             @Override
             public void OnItemClick(int position) {
                 //כאן צריך לפתוח את האקטיביטי של הצגת פרטים לפי המיקום הספציפי
-
                 Intent intent = new Intent(StudentRecyclerActivity.this, Present_student_details.class);
                 intent.putExtra("pos", position);
                 startActivity(intent);
-
-
                 Log.d("TAG", "row was clicked " + position);
             }
         });

@@ -145,8 +145,8 @@
         android:backgroundTint="#BCB2B2"
         android:text="Save"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/newStudent_cancel_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/newStudent_cancel_btn"
-        tools:layout_editor_absoluteY="622dp" />
+        app:layout_constraintStart_toEndOf="@+id/newStudent_cancel_btn" />
 </androidx.constraintlayout.widget.ConstraintLayout>
