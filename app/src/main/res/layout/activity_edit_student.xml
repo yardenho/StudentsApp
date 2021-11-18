@@ -122,9 +122,11 @@
 
     <Button
         android:id="@+id/editStudent_cancel_btn"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
         android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
         android:layout_marginBottom="20dp"
         android:backgroundTint="#BCB2B2"
         android:text="CANCEL"
@@ -137,8 +139,9 @@
 
     <Button
         android:id="@+id/editStudent_save_btn"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
         android:backgroundTint="#BCB2B2"
         android:text="SAVE"
         android:textSize="20sp"
@@ -151,8 +154,9 @@
 
     <Button
         android:id="@+id/editStudent_delete_btn"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
         android:backgroundTint="#BCB2B2"
         android:text="Delete"
         android:textSize="20sp"
